@@ -53,7 +53,12 @@ class MyHomePage extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(child: Text(transaction.value.toString())),
-                    Text(transaction.title),
+                    Column(
+                      children: [
+                        Text(transaction.title),
+                        Text(transaction.date.toString()),
+                      ],
+                    ),
                   ],
                 ),
               );
