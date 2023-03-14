@@ -85,6 +85,9 @@ class MyHomePage extends StatelessWidget {
                         ),
                         Text(
                           transaction.date.toString(),
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
                         ),
                       ],
                     ),
