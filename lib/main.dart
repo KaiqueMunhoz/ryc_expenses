@@ -80,6 +80,7 @@ class MyHomePage extends StatelessWidget {
                           transaction.title,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
                           ),
                         ),
                         Text(
