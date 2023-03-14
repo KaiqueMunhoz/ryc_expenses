@@ -75,8 +75,12 @@ class MyHomePage extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Text(transaction.title),
-                        Text(transaction.date.toString()),
+                        Text(
+                          transaction.title,
+                        ),
+                        Text(
+                          transaction.date.toString(),
+                        ),
                       ],
                     ),
                   ],
