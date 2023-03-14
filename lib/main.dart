@@ -63,6 +63,7 @@ class MyHomePage extends StatelessWidget {
                           width: 2,
                         ),
                       ),
+                      padding: EdgeInsets.all(10),
                       child: Text(
                         transaction.value.toString(),
                       ),
