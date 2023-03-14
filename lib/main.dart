@@ -65,7 +65,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       padding: EdgeInsets.all(10),
                       child: Text(
-                        transaction.value.toString(),
+                        'R\$ ${transaction.value}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
