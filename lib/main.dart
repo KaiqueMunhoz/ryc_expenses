@@ -26,13 +26,10 @@ class MyHomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Container(
-            width: double.infinity,
-            child: Card(
-              color: Colors.blue,
-              child: Text('Gráfico'),
-              elevation: 5,
-            ),
+          Card(
+            color: Colors.blue,
+            child: Text('Gráfico'),
+            elevation: 5,
           ),
           Card(
             child: Text('Lista de Transações'),
