@@ -57,6 +57,12 @@ class MyHomePage extends StatelessWidget {
                         horizontal: 15,
                         vertical: 10,
                       ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 2,
+                        ),
+                      ),
                       child: Text(
                         transaction.value.toString(),
                       ),
