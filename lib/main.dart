@@ -78,6 +78,9 @@ class MyHomePage extends StatelessWidget {
                       children: [
                         Text(
                           transaction.title,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         Text(
                           transaction.date.toString(),
