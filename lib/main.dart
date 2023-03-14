@@ -52,7 +52,11 @@ class MyHomePage extends StatelessWidget {
               return Card(
                 child: Row(
                   children: [
-                    Container(child: Text(transaction.value.toString())),
+                    Container(
+                      child: Text(
+                        transaction.value.toString(),
+                      ),
+                    ),
                     Column(
                       children: [
                         Text(transaction.title),
