@@ -98,11 +98,14 @@ class MyHomePage extends StatelessWidget {
           ),
           Card(
             elevation: 5,
-            child: Column(
-              children: [
-                TextField(),
-                TextField(),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  TextField(),
+                  TextField(),
+                ],
+              ),
             ),
           ),
         ],
