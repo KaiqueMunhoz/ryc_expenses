@@ -123,7 +123,10 @@ class MyHomePage extends StatelessWidget {
                       FlatButton(
                         child: Text('Nova Transação'),
                         textColor: Colors.purple,
-                        onPressed: () {},
+                        onPressed: () {
+                          print(titleController.text);
+                          print(valueController.text);
+                        },
                       ),
                     ],
                   )
