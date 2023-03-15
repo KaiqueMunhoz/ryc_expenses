@@ -106,11 +106,13 @@ class MyHomePage extends StatelessWidget {
               child: Column(
                 children: [
                   TextField(
+                    controller: titleController,
                     decoration: InputDecoration(
                       labelText: 'Título',
                     ),
                   ),
                   TextField(
+                    controller: valueController,
                     decoration: InputDecoration(
                       labelText: 'Valor (R\$)',
                     ),
