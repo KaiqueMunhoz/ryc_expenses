@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:ryc_expenses/components/transaction_form.dart';
 import 'package:ryc_expenses/components/transaction_list.dart';
 import 'package:ryc_expenses/models/transaction.dart';
 
@@ -34,8 +35,6 @@ class MyHomePage extends StatelessWidget {
     ),
   ];
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +50,7 @@ class MyHomePage extends StatelessWidget {
             elevation: 5,
           ),
           TransactionList(_transactions),
-          
+          TransactionForm(),
         ],
       ),
     );
