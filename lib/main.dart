@@ -96,6 +96,15 @@ class MyHomePage extends StatelessWidget {
               );
             }).toList(),
           ),
+          Card(
+            elevation: 5,
+            child: Column(
+              children: [
+                TextField(),
+                TextField(),
+              ],
+            ),
+          ),
         ],
       ),
     );
