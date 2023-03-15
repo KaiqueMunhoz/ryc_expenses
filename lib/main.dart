@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:ryc_expenses/components/transaction_form.dart';
-import 'package:ryc_expenses/components/transaction_list.dart';
-import 'package:ryc_expenses/models/transaction.dart';
+import 'package:ryc_expenses/components/transaction_user.dart';
 
 void main() => runApp(ExpensesApp());
 
@@ -20,21 +18,6 @@ class ExpensesApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key key}) : super(key: key);
 
-  final List<Transaction> _transactions = [
-    Transaction(
-      id: 't1',
-      title: 'Novo Tênis de Corrida',
-      value: 310.76,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Conta de Luz',
-      value: 211.30,
-      date: DateTime.now(),
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,8 +32,7 @@ class MyHomePage extends StatelessWidget {
             child: Text('Gráfico'),
             elevation: 5,
           ),
-          TransactionList(_transactions),
-          TransactionForm(),
+          TransactionUser(),
         ],
       ),
     );
