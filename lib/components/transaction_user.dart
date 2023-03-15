@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_expenses/components/transaction_form.dart';
+import 'package:ryc_expenses/components/transaction_list.dart';
+import 'package:ryc_expenses/models/transaction.dart';
 
 class TransactionUser extends StatefulWidget {
   const TransactionUser({Key key}) : super(key: key);
@@ -8,8 +11,28 @@ class TransactionUser extends StatefulWidget {
 }
 
 class _TransactionUserState extends State<TransactionUser> {
+  final List<Transaction> _transactions = [
+    Transaction(
+      id: 't1',
+      title: 'Novo Tênis de Corrida',
+      value: 310.76,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        TransactionList(_transactions),
+        TransactionForm(),
+      ],
+    );
   }
 }
