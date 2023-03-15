@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_expenses/models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
-  const TransactionList({Key key}) : super(key: key);
+  final List<Transaction> transactions;
+
+  TransactionList(
+    this.transactions, {
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
