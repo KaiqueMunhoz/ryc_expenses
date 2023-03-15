@@ -112,6 +112,10 @@ class MyHomePage extends StatelessWidget {
                       labelText: 'Valor (R\$)',
                     ),
                   ),
+                  FlatButton(
+                    child: Text('Nova Transação'),
+                    onPressed: () {},
+                  )
                 ],
               ),
             ),
