@@ -117,6 +117,7 @@ class MyHomePage extends StatelessWidget {
                     children: [
                       FlatButton(
                         child: Text('Nova Transação'),
+                        textColor: Colors.purple,
                         onPressed: () {},
                       ),
                     ],
