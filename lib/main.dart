@@ -33,6 +33,9 @@ class MyHomePage extends StatelessWidget {
     ),
   ];
 
+  final titleController = TextEditingController();
+  final valueController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
