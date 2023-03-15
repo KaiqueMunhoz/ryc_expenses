@@ -38,8 +38,8 @@ class TransactionForm extends StatelessWidget {
                   child: Text('Nova Transação'),
                   textColor: Colors.purple,
                   onPressed: () {
-                    print(titleController.text);
-                    print(valueController.text);
+                    final title = titleController.text;
+                    final value = double.tryParse(valueController.text) ?? 0.0;
                   },
                 ),
               ],
