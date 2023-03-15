@@ -112,9 +112,14 @@ class MyHomePage extends StatelessWidget {
                       labelText: 'Valor (R\$)',
                     ),
                   ),
-                  FlatButton(
-                    child: Text('Nova Transação'),
-                    onPressed: () {},
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      FlatButton(
+                        child: Text('Nova Transação'),
+                        onPressed: () {},
+                      ),
+                    ],
                   )
                 ],
               ),
