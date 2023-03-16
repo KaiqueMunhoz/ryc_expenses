@@ -18,6 +18,10 @@ class ExpensesApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key key}) : super(key: key);
 
+  void _openTransactionFormModal(BuildContext context) {
+    showModalBottomSheet(context: context, builder: (_) {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
