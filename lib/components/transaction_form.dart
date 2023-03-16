@@ -15,6 +15,10 @@ class TransactionForm extends StatelessWidget {
     final title = titleController.text;
     final value = double.tryParse(valueController.text) ?? 0.0;
 
+    if (title.isEmpty || value <= 0) {
+      return;
+    }
+
     onSubmit(title, value);
   }
 
