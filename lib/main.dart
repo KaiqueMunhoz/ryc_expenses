@@ -24,9 +24,10 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Despesas Pessoais'),
         actions: [
-          Icon(
-            Icons.add,
-          )
+          IconButton(
+            icon: Icon(Icons.add),
+            onPressed: () {},
+          ),
         ],
       ),
       body: SingleChildScrollView(
