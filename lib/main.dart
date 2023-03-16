@@ -1,6 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:ryc_expenses/components/transaction_user.dart';
+import 'package:ryc_expenses/components/transaction_form.dart';
+import 'package:ryc_expenses/models/transaction.dart';
+
+import 'components/transaction_list.dart';
 
 void main() => runApp(ExpensesApp());
 
@@ -23,8 +27,40 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final List<Transaction> _transactions = [
+    Transaction(
+      id: 't1',
+      title: 'Novo Tênis de Corrida',
+      value: 310.76,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+  ];
+
+  _addTransaction(String title, double value) {
+    final newTransaction = Transaction(
+      id: Random().nextDouble().toString(),
+      title: title,
+      value: value,
+      date: DateTime.now(),
+    );
+
+    setState(() {
+      _transactions.add(newTransaction);
+    });
+  }
+
   void _openTransactionFormModal(BuildContext context) {
-    showModalBottomSheet(context: context, builder: (_) {});
+    showModalBottomSheet(
+        context: context,
+        builder: (_) {
+          return TransactionForm(_addTransaction);
+        });
   }
 
   @override
@@ -48,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Gráfico'),
               elevation: 5,
             ),
-            TransactionUser(),
+            TransactionList(_transactions),
           ],
         ),
       ),
