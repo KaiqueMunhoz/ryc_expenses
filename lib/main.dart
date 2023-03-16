@@ -23,6 +23,11 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Despesas Pessoais'),
+        actions: [
+          Icon(
+            Icons.add,
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
