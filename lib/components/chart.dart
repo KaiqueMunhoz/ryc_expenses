@@ -24,9 +24,6 @@ class Chart extends StatelessWidget {
         if (sameDay && sameMonth && sameYear) {
           totalSum += recentTransaction[i].value;
         }
-
-        print("_day ${_day}");
-        print("totalSum ${totalSum}");
       }
 
       return {'day': _day, 'value': 9.99};
@@ -39,7 +36,9 @@ class Chart extends StatelessWidget {
       elevation: 6,
       margin: EdgeInsets.all(20),
       child: Row(
-        children: [],
+        children: groupedTransaction.map((transaction) {
+          return Text('${transaction['day']} : ${transaction['value']}');
+        }).toList(),
       ),
     );
   }
