@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ryc_expenses/models/transaction.dart';
 
 class Chart extends StatelessWidget {
-  const Chart({Key key}) : super(key: key);
+  final List<Transaction> recentTransaction;
+
+  const Chart(this.recentTransaction, {Key key}) : super(key: key);
 
   List<Map<String, Object>> get groupedTransaction {
     return List.generate(7, (index) {
