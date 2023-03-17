@@ -15,7 +15,14 @@ class TransactionList extends StatelessWidget {
     return Container(
       height: 300,
       child: transactions.isEmpty
-          ? Column()
+          ? Column(
+              children: [
+                Text(
+                  'Nenhuma Transação Cadastrada',
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+              ],
+            )
           : ListView.builder(
               itemCount: transactions.length,
               itemBuilder: (_, _index) {
