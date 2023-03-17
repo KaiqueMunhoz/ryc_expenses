@@ -7,7 +7,9 @@ class Chart extends StatelessWidget {
   const Chart(this.recentTransaction, {Key key}) : super(key: key);
 
   List<Map<String, Object>> get groupedTransaction {
-    return List.generate(7, (index) {
+    final int _numberOfDaysOfAWeek = 7;
+
+    return List.generate(_numberOfDaysOfAWeek, (index) {
       return {'day': 'T', 'value': 9.99};
     });
   }
