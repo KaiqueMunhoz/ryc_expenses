@@ -14,10 +14,19 @@ class Chart extends StatelessWidget {
       final DateTime weekDay = DateTime.now().subtract(Duration(days: index));
       final String _day = DateFormat.E().format(weekDay)[0];
 
+      double totalSum = 0.0;
+
       for (int i = 0; i < recentTransaction.length; i++) {
         bool sameDay = recentTransaction[i].date.day == weekDay.day;
         bool sameMonth = recentTransaction[i].date.month == weekDay.month;
         bool sameYear = recentTransaction[i].date.year == weekDay.year;
+
+        if (sameDay && sameMonth && sameYear) {
+          totalSum += recentTransaction[i].value;
+        }
+
+        print("_day ${_day}");
+        print("totalSum ${totalSum}");
       }
 
       return {'day': _day, 'value': 9.99};
