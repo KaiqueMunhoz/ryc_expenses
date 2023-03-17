@@ -10,6 +10,8 @@ class Chart extends StatelessWidget {
     final int _numberOfDaysOfAWeek = 7;
 
     return List.generate(_numberOfDaysOfAWeek, (index) {
+      final DateTime weekDay = DateTime.now().subtract(Duration(days: index));
+
       return {'day': 'T', 'value': 9.99};
     });
   }
