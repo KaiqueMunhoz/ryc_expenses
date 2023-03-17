@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:ryc_expenses/models/transaction.dart';
 
 class Chart extends StatelessWidget {
@@ -11,8 +12,9 @@ class Chart extends StatelessWidget {
 
     return List.generate(_numberOfDaysOfAWeek, (index) {
       final DateTime weekDay = DateTime.now().subtract(Duration(days: index));
+      final String _day = DateFormat.E().format(weekDay)[0];
 
-      return {'day': 'T', 'value': 9.99};
+      return {'day': _day, 'value': 9.99};
     });
   }
 
