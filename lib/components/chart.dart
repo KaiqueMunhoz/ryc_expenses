@@ -14,6 +14,12 @@ class Chart extends StatelessWidget {
       final DateTime weekDay = DateTime.now().subtract(Duration(days: index));
       final String _day = DateFormat.E().format(weekDay)[0];
 
+      for (int i = 0; i < recentTransaction.length; i++) {
+        bool sameDay = recentTransaction[i].date.day == weekDay.day;
+        bool sameMonth = recentTransaction[i].date.month == weekDay.month;
+        bool sameYear = recentTransaction[i].date.year == weekDay.year;
+      }
+
       return {'day': _day, 'value': 9.99};
     });
   }
