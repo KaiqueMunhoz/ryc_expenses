@@ -37,22 +37,29 @@ class TransactionList extends StatelessWidget {
               itemBuilder: (_, _index) {
                 final Transaction transaction = transactions[_index];
 
-                return ListTile(
-                  leading: CircleAvatar(
-                    radius: 30.0,
-                    child: Padding(
-                      padding: const EdgeInsets.all(6.0),
-                      child: FittedBox(
-                        child: Text('R\$${transaction.value}'),
+                return Card(
+                  elevation: 5.0,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 8.0,
+                    horizontal: 5.0,
+                  ),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 30.0,
+                      child: Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: FittedBox(
+                          child: Text('R\$${transaction.value}'),
+                        ),
                       ),
                     ),
-                  ),
-                  title: Text(
-                    transaction.title,
-                    style: Theme.of(context).textTheme.headline6,
-                  ),
-                  subtitle: Text(
-                    DateFormat('d MMM y').format(transaction.date),
+                    title: Text(
+                      transaction.title,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    subtitle: Text(
+                      DateFormat('d MMM y').format(transaction.date),
+                    ),
                   ),
                 );
               },
