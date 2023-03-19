@@ -48,10 +48,12 @@ class Chart extends StatelessWidget {
           final double _value = transaction['value'] as double;
           final double _percentage = _value / _weekTotalValue;
 
-          return ChartBar(
-            label: _day,
-            value: _value,
-            percentage: _percentage,
+          return Expanded(
+            child: ChartBar(
+              label: _day,
+              value: _value,
+              percentage: _percentage,
+            ),
           );
         }).toList(),
       ),
