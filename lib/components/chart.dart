@@ -41,21 +41,24 @@ class Chart extends StatelessWidget {
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: groupedTransaction.map((transaction) {
-          final String _day = transaction['day'] as String;
-          final double _value = transaction['value'] as double;
-          final double _percentage = _value / _weekTotalValue;
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: groupedTransaction.map((transaction) {
+            final String _day = transaction['day'] as String;
+            final double _value = transaction['value'] as double;
+            final double _percentage = _value / _weekTotalValue;
 
-          return Expanded(
-            child: ChartBar(
-              label: _day,
-              value: _value,
-              percentage: _percentage,
-            ),
-          );
-        }).toList(),
+            return Expanded(
+              child: ChartBar(
+                label: _day,
+                value: _value,
+                percentage: _percentage,
+              ),
+            );
+          }).toList(),
+        ),
       ),
     );
   }
