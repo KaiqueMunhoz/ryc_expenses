@@ -27,7 +27,7 @@ class Chart extends StatelessWidget {
         }
       }
 
-      return {'day': _day, 'value': 9.99};
+      return {'day': _day, 'value': totalSum};
     });
   }
 
