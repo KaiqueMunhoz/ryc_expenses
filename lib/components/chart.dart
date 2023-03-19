@@ -45,7 +45,13 @@ class Chart extends StatelessWidget {
         children: groupedTransaction.map((transaction) {
           final String _day = transaction['day'] as String;
           final double _value = transaction['value'] as double;
-          return ChartBar(label: _day, value: _value, percentage: 0);
+          final double _percentage = _value / _weekTotalValue;
+
+          return ChartBar(
+            label: _day,
+            value: _value,
+            percentage: _percentage,
+          );
         }).toList(),
       ),
     );
