@@ -37,7 +37,17 @@ class TransactionList extends StatelessWidget {
               itemBuilder: (_, _index) {
                 final Transaction transaction = transactions[_index];
 
-                return Container();
+                return ListTile(
+                  leading: CircleAvatar(
+                    radius: 30.0,
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: FittedBox(
+                        child: Text('R\$${transaction.value}'),
+                      ),
+                    ),
+                  ),
+                );
               },
             ),
     );
