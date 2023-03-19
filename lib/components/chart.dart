@@ -42,6 +42,7 @@ class Chart extends StatelessWidget {
       elevation: 6,
       margin: EdgeInsets.all(20),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: groupedTransaction.map((transaction) {
           final String _day = transaction['day'] as String;
           final double _value = transaction['value'] as double;
