@@ -4,9 +4,11 @@ import 'package:ryc_expenses/models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
+  final Function(String) onRemove;
 
   TransactionList(
-    this.transactions, {
+    this.transactions,
+    this.onRemove, {
     Key key,
   }) : super(key: key);
 
@@ -63,7 +65,7 @@ class TransactionList extends StatelessWidget {
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
                       color: Theme.of(context).errorColor,
-                      onPressed: () {},
+                      onPressed: () => onRemove(transaction.id),
                     ),
                   ),
                 );
