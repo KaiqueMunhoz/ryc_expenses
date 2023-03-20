@@ -28,6 +28,14 @@ class _TransactionFormState extends State<TransactionForm> {
     widget.onSubmit(title, value);
   }
 
+  _showDatePicker() {
+    showDatePicker(
+        context: context,
+        initialDate: DateTime.now(),
+        firstDate: DateTime(2019),
+        lastDate: DateTime.now());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
