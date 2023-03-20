@@ -96,6 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.of(context).pop();
   }
 
+  void _removeTransaction(String id) {
+    setState(() {
+      _transactions.removeWhere((transaction) => transaction.id == id);
+    });
+  }
+
   void _openTransactionFormModal(BuildContext context) {
     showModalBottomSheet(
         context: context,
