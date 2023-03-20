@@ -34,7 +34,11 @@ class _TransactionFormState extends State<TransactionForm> {
       initialDate: DateTime.now(),
       firstDate: DateTime(2019),
       lastDate: DateTime.now(),
-    );
+    ).then((_selectedDate) {
+      setState(() {
+        selectedDate = _selectedDate;
+      });
+    });
   }
 
   @override
