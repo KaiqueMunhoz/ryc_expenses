@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class TransactionForm extends StatefulWidget {
   final void Function(String, double) onSubmit;
@@ -71,7 +72,11 @@ class _TransactionFormState extends State<TransactionForm> {
               height: 70.0,
               child: Row(
                 children: [
-                  Text('Nenhuma data selecionada!'),
+                  Text(
+                    _selectedDate == null
+                        ? 'Nenhuma data selecionada!'
+                        : DateFormat('d/M/y').format(_selectedDate),
+                  ),
                   FlatButton(
                     child: Text(
                       'Selecionar Data',
