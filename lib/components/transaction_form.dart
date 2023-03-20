@@ -52,6 +52,15 @@ class _TransactionFormState extends State<TransactionForm> {
               ),
             ),
             Row(
+              children: [
+                Text('Nenhuma data selecionada!'),
+                FlatButton(
+                  child: Text('Selecionar Data'),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 FlatButton(
