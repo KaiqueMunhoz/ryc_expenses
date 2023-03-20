@@ -34,12 +34,12 @@ class _TransactionFormState extends State<TransactionForm> {
       initialDate: DateTime.now(),
       firstDate: DateTime(2019),
       lastDate: DateTime.now(),
-    ).then((_selectedDate) {
-      if (_selectedDate == null) {
+    ).then((pickedDate) {
+      if (pickedDate == null) {
         return;
       }
       setState(() {
-        selectedDate = _selectedDate;
+        selectedDate = pickedDate;
       });
     });
   }
