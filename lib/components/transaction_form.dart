@@ -72,10 +72,12 @@ class _TransactionFormState extends State<TransactionForm> {
               height: 70.0,
               child: Row(
                 children: [
-                  Text(
-                    _selectedDate == null
-                        ? 'Nenhuma data selecionada!'
-                        : DateFormat('d/M/y').format(_selectedDate),
+                  Expanded(
+                    child: Text(
+                      _selectedDate == null
+                          ? 'Nenhuma data selecionada!'
+                          : DateFormat('d/M/y').format(_selectedDate),
+                    ),
                   ),
                   FlatButton(
                     child: Text(
