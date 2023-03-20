@@ -57,7 +57,11 @@ class _TransactionFormState extends State<TransactionForm> {
                 children: [
                   Text('Nenhuma data selecionada!'),
                   FlatButton(
-                    child: Text('Selecionar Data'),
+                    child: Text(
+                      'Selecionar Data',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    textColor: Theme.of(context).primaryColor,
                     onPressed: () {},
                   ),
                 ],
