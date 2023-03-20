@@ -29,10 +29,11 @@ class _TransactionFormState extends State<TransactionForm> {
 
   _showDatePicker() {
     showDatePicker(
-        context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime(2019),
-        lastDate: DateTime.now());
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2019),
+      lastDate: DateTime.now(),
+    );
   }
 
   @override
