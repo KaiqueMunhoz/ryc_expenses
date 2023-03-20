@@ -70,7 +70,7 @@ class _TransactionFormState extends State<TransactionForm> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     textColor: Theme.of(context).primaryColor,
-                    onPressed: () {},
+                    onPressed: _showDatePicker,
                   ),
                 ],
               ),
